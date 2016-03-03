@@ -1,11 +1,10 @@
 var bottleCount = function(n) {
   var text = "";
   for (i = n ; i > 1; i--) {
-    text = text + i + "b"
-  }
+    text += i + " bottles of beer on the wall " + i + " bottles of beer...take one down, pass it around, " + [i - 1] + " bottles of beer on the wall. " + "<br>";
+    }
   return text;
 }
-
 
 $(document).ready(function() {
   $("form#bottles").submit(function(event) {
@@ -15,13 +14,10 @@ $(document).ready(function() {
 
 
 
-    $(".n").text(result);
-    // $(".nMinusOne").text(m);
+    $(".n").html(result);
+
 
     $("#result").show();
     event.preventDefault();
   });
 });
-
-// var song = "";
-// text += n + "bottles of beer on the wall" + n + "bottles of beer..." + "<br>" + "take one down, pass it around," + n[i] + "bottles of beer on the wall."
